@@ -35,11 +35,11 @@ if (selectedOption == 0)
     var ankaraIcon = Utils.getIcon(ankaraWeather.description);
     Console.Write($"\n> Showing weather information for: Ankara\n");
     Console.WriteLine(ankaraIcon);
-    Console.SetCursorPosition(20, 19);
+    Console.SetCursorPosition(20, 22);
     Console.WriteLine($"{ankaraFormattedData.description}");
-    Console.SetCursorPosition(20, 20);
+    Console.SetCursorPosition(20, 23);
     Console.WriteLine($"{ankaraFormattedData.temperature}");
-    Console.SetCursorPosition(20, 21);
+    Console.SetCursorPosition(20, 24);
     Console.WriteLine($"{ankaraFormattedData.wind}");
     Console.WriteLine("\n");
     
@@ -54,11 +54,11 @@ if (selectedOption == 0)
     var izmirIcon = Utils.getIcon(izmirWeather.description);
     Console.Write($"\n> Showing weather information for: Izmir\n");
     Console.WriteLine(izmirIcon);
-    Console.SetCursorPosition(20, 23);
+    Console.SetCursorPosition(20, 31);
     Console.WriteLine($"{izmirFormattedData.description}");
-    Console.SetCursorPosition(20, 24);
+    Console.SetCursorPosition(20, 32);
     Console.WriteLine($"{izmirFormattedData.temperature}");
-    Console.SetCursorPosition(20, 25);
+    Console.SetCursorPosition(20, 33);
     Console.WriteLine($"{izmirFormattedData.wind}");
     Console.WriteLine("\n");
     
