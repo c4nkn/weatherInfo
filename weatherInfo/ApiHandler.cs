@@ -32,20 +32,18 @@ namespace weatherInfo
 			}
 		}
 		
-		public static async Task<WeatherInfo> getDataFor(string city)
+		public static async Task<(WeatherInfo, int errorCode)> getDataFor(string city)
 		{
-			string[] cities = { "istanbul", "izmir", "ankara" };
+			apiUrls = $"https://goweather.herokuapp.com/weather/{city}";
+			WeatherInfo weatherInfo = await requestTo(apiUrls);
 
-			if (cities.Contains(city.ToLower()))
+			if (weatherInfo == null)
 			{
-				apiUrls = $"https://goweather.herokuapp.com/weather/{city}";
-				WeatherInfo weatherInfo = await requestTo(apiUrls);
-				return weatherInfo;
+				return (null, 404);
 			}
 			else
 			{
-				Console.WriteLine($"Couldn't find data for {city}");
-				return null;
+				return (weatherInfo, 000);
 			}
 		}
 	}
