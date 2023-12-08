@@ -13,9 +13,8 @@ if (selectedOption == 0)
     (WeatherInfo istanbulWeather, int istanbulResponseStatus) = await ApiHandler.getDataFor("Istanbul");
     WeatherInfo istanbulFormattedData = Utils.formatData(istanbulWeather);
     var istanbulIcon = Utils.getIcon(istanbulWeather.description);
-    Console.SetCursorPosition(0, 8);
-    Console.Write($"> Showing weather information for: Istanbul");
-    Console.SetCursorPosition(0, 9);
+    
+    Console.Write($"> Showing weather information for: Istanbul\n");
     Console.WriteLine(istanbulIcon);
     Console.SetCursorPosition(20, 10);
     Console.WriteLine($"{istanbulFormattedData.description}");
@@ -34,9 +33,7 @@ if (selectedOption == 0)
     (WeatherInfo ankaraWeather, int ankaraResponseStatus) = await ApiHandler.getDataFor("Ankara");
     WeatherInfo ankaraFormattedData = Utils.formatData(ankaraWeather);
     var ankaraIcon = Utils.getIcon(ankaraWeather.description);
-    Console.SetCursorPosition(0, 20);
-    Console.Write($"> Showing weather information for: Ankara");
-    Console.SetCursorPosition(0, 21);
+    Console.Write($"\n> Showing weather information for: Ankara\n");
     Console.WriteLine(ankaraIcon);
     Console.SetCursorPosition(20, 19);
     Console.WriteLine($"{ankaraFormattedData.description}");
@@ -55,14 +52,13 @@ if (selectedOption == 0)
     (WeatherInfo izmirWeather, int izmirResponseStatus) = await ApiHandler.getDataFor("Izmir");
     WeatherInfo izmirFormattedData = Utils.formatData(izmirWeather);
     var izmirIcon = Utils.getIcon(izmirWeather.description);
-    Console.WriteLine("\n");
-    Console.Write($"> Showing weather information for: Izmir");
-    Console.WriteLine("\n" + izmirIcon);
-    Console.SetCursorPosition(20, 19);
+    Console.Write($"\n> Showing weather information for: Izmir\n");
+    Console.WriteLine(izmirIcon);
+    Console.SetCursorPosition(20, 23);
     Console.WriteLine($"{izmirFormattedData.description}");
-    Console.SetCursorPosition(20, 20);
+    Console.SetCursorPosition(20, 24);
     Console.WriteLine($"{izmirFormattedData.temperature}");
-    Console.SetCursorPosition(20, 21);
+    Console.SetCursorPosition(20, 25);
     Console.WriteLine($"{izmirFormattedData.wind}");
     Console.WriteLine("\n");
     
